@@ -28,7 +28,7 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
 directionalLight.position.set(1, 2, 6);
 scene.add(directionalLight);
 
-const background = textureLoader.load("resources/images/space.jpg");
+const background = textureLoader.load("/images/space.jpg");
 scene.background = background;
 
 const makeMesh = (geometry, color, texturePath, offset) => {
@@ -57,42 +57,16 @@ const makeMesh = (geometry, color, texturePath, offset) => {
 };
 
 const objects = [
-  makeMesh(getCubeGeometry(12), undefined, "resources/images/wood.jpg", 40),
-  makeMesh(
-    getTorusGeometry(7, 4),
-    undefined,
-    "resources/images/donut1.png",
-    70
-  ),
-  makeMesh(getCubeGeometry(10), undefined, "resources/images/wall.jpg", 150),
-  makeMesh(
-    getSphereGeometry(5),
-    undefined,
-    "resources/images/eye_0001_c.jpg",
-    190
-  ),
-  makeMesh(getCubeGeometry(10), undefined, "resources/images/doge.jpg", 230),
-  makeMesh(
-    getCubeGeometry(10),
-    undefined,
-    "resources/images/doge_glasses.jpg",
-    270
-  ),
-
-  makeMesh(
-    getSphereGeometry(5),
-    undefined,
-    "resources/images/textil5.jpg",
-    300
-  ),
-
-  makeMesh(
-    getTorusGeometry(7, 4),
-    undefined,
-    "resources/images/donut2.png",
-    330
-  ),
-  makeMesh(getCubeGeometry(10), 0xbf1304, undefined, 400),
+  makeMesh(getCubeGeometry(12), undefined, "/images/wood.jpg", 40),
+  makeMesh(getTorusGeometry(7, 4), undefined, "/images/donut1.png", 70),
+  makeMesh(getCubeGeometry(10), undefined, "/images/wall.jpg", 150),
+  makeMesh(getSphereGeometry(5), undefined, "/images/eye_0001_c.jpg", 190),
+  makeMesh(getCubeGeometry(10), undefined, "/images/spangeBob.jpg", 230),
+  makeMesh(getCubeGeometry(10), undefined, "/images/doge_glasses.jpg", 270),
+  makeMesh(getSphereGeometry(5), undefined, "/images/textil5.jpg", 300),
+  makeMesh(getTorusGeometry(7, 4), undefined, "/images/donut2.png", 330),
+  makeMesh(getCubeGeometry(10), undefined, "/images/doge.jpg", 400),
+  makeMesh(getCubeGeometry(10), 0xbf1304, undefined, 440),
 ];
 
 const needsResize = () => {
