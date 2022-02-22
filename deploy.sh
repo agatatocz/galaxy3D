@@ -13,14 +13,9 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -b main
+git checkout -b master
 git add -A
 git commit -m 'deploy'
-
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:agatatocz/galaxy3D.git main:gh-pages
+git push -f https://github.com/agatatocz/galaxy3D.git master:gh-pages
 
 cd -
